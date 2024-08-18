@@ -4,6 +4,8 @@ This supplementary material consists of three main components: all the datasets 
 
 ## Dataset
 
+- **Note**:The dataset file can be downloaded from https://pan.baidu.com/s/1LIf0zcMuhxVN9359dsG33Q?pwd=21sx.
+
 - MindScope
 
   - static_dataset.xlsx
@@ -73,6 +75,8 @@ This supplementary material consists of three main components: all the datasets 
   pip install -r requirements.txt
   ```
 
+- Download `Data.rar` from https://pan.baidu.com/s/19yk5HvYi44ZcdvQX4VZ32w?pwd=62hq and extract it into the `Code` folder.
+
 - Setting the Openai key
 
   - Place your sk-xxx openai api in the root directory under **Key_GPT_0.txt**.
@@ -84,136 +88,136 @@ This supplementary material consists of three main components: all the datasets 
   - test Static dataset
 
     - gpt-3.5-turbo
-  
+
       ```
       python test_LLM.py -model_name 'GPT' -model_type 'gpt-3.5-turbo'
       ```
-  
+
     - gpt-4-turbo
-  
+
       ```
       python test_LLM.py -model_name 'GPT' -model_type 'gpt-4-turbo'
       ```
-  
+
     - llama2-7b   local 
-  
+
       ```
       python test_LLM.py -model_path 'your model weight path' -model_name 'Llama2' 
       ```
-  
+
     - llama3-8b  local 
-  
+
       ```
       python test_LLM.py -model_path 'your model weight path' -model_name 'Llama3' 
       ```
-  
+
     - chatglm-6b  local 
-  
+
       ```
       python test_LLM.py -model_path 'your model weight path' -model_name 'ChatGLM' 
       ```
-  
+
     - vicuna-7b  local 
-  
+
       ```
       python test_LLM.py -model_path 'your model weight path' -model_name 'Vicuna'
       ```
-  
+
   - Evaluate cognitive biases in LLMs (In static dataset)
-  
+
     - llama3-8b
-  
+
       ```
       python evaluate_LLM.py --test_model 'llama3-8B' --used_model 'gpt-4-turbo'
       ```
-  
+
     - llama3-70b
-  
+
       ```
       python evaluate_LLM.py --test_model 'llama3-70B' --used_model 'gpt-4-turbo'
       ```
-  
+
     - llama2-7b
-  
+
       ```
       python evaluate_LLM.py --test_model 'llama2-7B' --used_model 'gpt-4-turbo'
       ```
-  
+
     - llama2-13b
-  
+
       ```
       python evaluate_LLM.py --test_model 'llama2-13B' --used_model 'gpt-4-turbo'
       ```
-  
+
     - llama2-70b
-  
+
       ```
       python evaluate_LLM.py --test_model 'llama2-70B' --used_model 'gpt-4-turbo'
       ```
-  
+
     - gpt-3.5-turbo
-  
+
       ```
       python evaluate_LLM.py --test_model 'gpt-3.5' --used_model 'gpt-4-turbo'
       ```
-  
+
     - gpt-4-tubo
-  
+
       ```
       python evaluate_LLM.py --test_model 'GPT4' --used_model 'gpt-4-turbo'
       ```
-  
+
     - chatglm
-  
+
       ```
       python evaluate_LLM.py --test_model 'chatglm-6b' --used_model 'gpt-4-turbo'
       ```
-  
+
     - vicuna-7b
-  
+
       ```
       python evaluate_LLM.py --test_model 'vicuna-7b' --used_model 'gpt-4-turbo'
       ```
-  
+
     - vicuna-13b
-  
+
       ```
       python evaluate_LLM.py --test_model 'vicuna-13b' --used_model 'gpt-4-turbo'
       ```
-  
+
     - vicuna-33b
-  
+
       ```
       python evaluate_LLM.py --test_model 'vicuna-33b' --used_model 'gpt-4-turbo'
       ```
-  
+
   - test Dynamic dataset
-  
+
     ```
     #default test gpt-4-turbo
     python RuleGen.py
     ```
-  
+
   - Evaluate cognitive biases in LLMs (In dynamic dataset)
-  
+
     ```
     python evaluateCB_LLM_Dynamic.py
     ```
-  
+
   - build debate set
-  
+
     ```
     python build_debate_set.py
     ```
-  
+
   - Method for Detecting Cognitive Bias (Without Labels)
-  
+
     ```
     python detect_method.py
     ```
-  
+
   - Training Decision Module
-  
+
     ```
     python Train_decision_module/ant_colony_optimization.py
     python Train_decision_module/genetic_algorithm.py
