@@ -1,0 +1,14 @@
+openai
+pandas
+tqdm
+langchain
+numpy
+requests
+tiktoken
+openpyxl
+faiss-gpu
+torch
+transformers
+tensorflow
+accelerate
+sentencepiece
